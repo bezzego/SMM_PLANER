@@ -1,0 +1,144 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+image/
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.egg-info/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg
+*.egg-info
+*.tgz
+*.whl
+*.zip
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+cachito-bom.json
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Static files for development servers
+staticfiles/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# PyInstaller
+#  Usually not needed
+/dist/
+/build/
+/*.spec
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# mkdocs documentation
+/site
+
+# Rope refactoring tool
+.ropeproject
+
+# memory_profiler extension
+.mprof.dat
+mprof.dat
+
+# Mr Developer
+.develop
+
+# IPython notebook
+.ipynb_checkpoints
+
+# Jupyter Notebook related files
+jupyter_notebook_config.*
+notebooks/
+nbconvert.ipynb
+
+# PyCharm configuration
+.idea/
+.project
+.workspace
+
+# Docker
+Dockerfile*
+docker-compose.yml
+
+# VS Code workspace settings
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Poetry lock file
+poetry.lock
+
+# Anaconda environment variables
+conda-env.yaml
+
+# Virtual Environment Configurations
+virtualenv.cfg
+
+# Nuitka output folder
+.build/
