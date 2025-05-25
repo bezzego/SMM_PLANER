@@ -43,10 +43,9 @@ def get_access_token(url):
     response.raise_for_status()
     token_data=response.json()
     vk_refresh_token = token_data['refresh_token']
-    vk_access_token = token_data['access_token']
     set_key('.env', 'VK_REFRESH_TOKEN', vk_refresh_token)
     set_key('.env', 'DEVICE_ID', device_id)
-    return vk_access_token
+
 
 def get_new_token(vk_refresh_token,device_id):
     oauth2_url = "https://id.vk.com/oauth2/auth"
@@ -68,7 +67,6 @@ def get_new_token(vk_refresh_token,device_id):
     vk_refresh_token = new_token_data['refresh_token']
     vk_access_token = new_token_data['access_token']
     set_key('.env', 'VK_REFRESH_TOKEN', vk_refresh_token)
-    set_key('.env', 'VK_ACCESS_TOKEN', vk_access_token)
     return vk_access_token
 
 def get_first_token():
