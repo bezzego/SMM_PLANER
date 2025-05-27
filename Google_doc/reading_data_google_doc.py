@@ -11,7 +11,12 @@ def formating_google_tab_json(service_account_google, table_id):
     list_of_dicts = worksheet.get_all_records()
     json_string = json.dumps(list_of_dicts, indent=4)
     # Откладочный принт
-    print(json_string)
+    return list_of_dicts
+
+def update_table_vk_status(service_account_google, table_id,row):
+    client = gspread.service_account(filename=service_account_google)
+    worksheet = client.open_by_key(table_id).sheet1
+    worksheet.update_cell(row,6,'опубликовано')
 
 def main():
     load_dotenv()

@@ -46,7 +46,6 @@ def get_access_token(url):
     set_key('.env', 'VK_REFRESH_TOKEN', vk_refresh_token)
     set_key('.env', 'DEVICE_ID', device_id)
 
-
 def get_new_token(vk_refresh_token,device_id):
     oauth2_url = "https://id.vk.com/oauth2/auth"
     data = {

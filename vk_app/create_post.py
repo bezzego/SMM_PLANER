@@ -1,4 +1,4 @@
-from get_photos_data import get_data_for_photos_posting
+from vk_app.get_photos_data import get_data_for_photos_posting
 import requests
 
 

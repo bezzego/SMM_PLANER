@@ -5,7 +5,7 @@ __pycache__/
 image/
 # C extensions
 *.so
-
+service_account_google.json
 # Distribution / packaging
 .Python
 build/
