@@ -12,8 +12,8 @@ load_dotenv()
 
 CHECK_INTERVAL = 60
 DATETIME_FORMAT = "%d.%m.%Y %H:%M"
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-CHANNEL_ID = os.getenv("CHANNEL_ID")
+TG_BOT_TOKEN = os.getenv("TG_BOT_TOKEN")
+TG_CHANNEL_ID = os.getenv("TG_CHANNEL_ID")
 TABLE_ID = os.getenv("TABLE_ID")
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SERVICE_ACCOUNT_FILE = os.path.join(BASE_DIR, "..", "Google_doc", "service_account_google.json")
@@ -49,13 +49,13 @@ def update_table_status(row_index, column_name, new_status):
         return False
 
 def send_to_telegram(text, image_url=None):
-    api_url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/"
+    api_url = f"https://api.telegram.org/bot{TG_BOT_TOKEN}/"
     if image_url:
         media = [{"type": "photo", "media": url, "caption": text} for url in image_url.split(",")]
-        payload = {"chat_id": CHANNEL_ID, "media": json.dumps(media)}
+        payload = {"chat_id": TG_CHANNEL_ID, "media": json.dumps(media)}
         response = requests.post(api_url + "sendMediaGroup", data=payload)
     else:
-        payload = {"chat_id": CHANNEL_ID, "text": text, "parse_mode": "HTML"}
+        payload = {"chat_id": TG_CHANNEL_ID, "text": text, "parse_mode": "HTML"}
         response = requests.post(api_url + "sendMessage", data=payload)
     return response.json().get("ok", False)
 
